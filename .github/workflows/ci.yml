@@ -32,4 +32,4 @@ jobs:
         token: ${{ secrets.WOKWI_API_KEY }}
         path: /
         timeout: 60000
-        expect_text: 'SMART_PARKING_V1_OK'
+        expect_text: 'SMART_PARKING_V2_OK'
