@@ -6,7 +6,8 @@
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
     { "type": "wokwi-led", "id": "led_green", "top": -60, "left": 100, "attrs": { "color": "green" } },
     { "type": "wokwi-resistor", "id": "res_green", "top": -20, "left": 100, "attrs": { "value": "220" } },
-    { "type": "wokwi-buzzer", "id": "buzzer", "top": -120, "left": 100, "attrs": {} }
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": -120, "left": 100, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic", "top": 50, "left": 100, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
@@ -15,6 +16,10 @@
     [ "res_green:2", "led_green:A", "green", [] ],
     [ "led_green:C", "esp:GND.1", "black", [] ],
     [ "esp:23", "buzzer:PIN", "purple", [] ],
-    [ "buzzer:GND", "esp:GND.2", "black", [] ]
+    [ "buzzer:GND", "esp:GND.2", "black", [] ],
+    [ "ultrasonic:VCC", "esp:3V3", "red", [] ],
+    [ "ultrasonic:GND", "esp:GND.3", "black", [] ],
+    [ "ultrasonic:TRIG", "esp:5", "blue", [] ],
+    [ "ultrasonic:ECHO", "esp:18", "yellow", [] ]
   ]
 }

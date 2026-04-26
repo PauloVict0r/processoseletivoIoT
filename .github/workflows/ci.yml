@@ -32,4 +32,4 @@ jobs:
         token: ${{ secrets.WOKWI_API_KEY }}
         path: /
         timeout: 60000
-        expect_text: 'BUZZER_TEST_OK'
+        expect_text: 'SENSOR_TEST_OK'
